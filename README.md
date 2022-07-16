@@ -1,1 +1,1 @@
-# SysWizs
+# SysWiz
