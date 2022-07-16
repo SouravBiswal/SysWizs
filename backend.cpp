@@ -32,13 +32,21 @@ void insertValue(map<string, set<string> >& myMap)
    }
 }
 
-void getFiles()
+void getFiles(map<string, set<string> > myMap)
 {
     string tag;
 
     cin >> tag;
-
-    // Check if tag is present in map, if not give error, else fetch the files and return them
+   if ( myMap[tag].size()>0 )
+   {
+      //cout << "Print the present sets";
+      //for(auto& it : myMap[tag])
+        //cout<<it<<" ";
+   }
+   else
+   {
+      //cout << "no such tag available";
+   }// Check if tag is present in map, if not give error, else fetch the files and return them
 
 }
 
@@ -56,25 +64,27 @@ int main()
 {
     string tagName;
     string filePath;
-    int n;
+    int n=0;
 
 
 
     map <string,set <string> > myMap;
-    cin>>n;
+
+    while(n!=4)
+    {cin>>n;
     switch(n)
     {
         case 1:
            insertValue(myMap);
         break;
         case 2:
-            getFiles();
+            getFiles(myMap);
             break;
         case 3:
             removeTagFromFile();
             break;
         default:
-            cout<<"Error"<<endl;
+            cout<<"Ended"<<endl;
     }
-
+    }
 }
