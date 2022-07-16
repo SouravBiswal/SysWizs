@@ -7,13 +7,16 @@
 using namespace std;
 
 
-void insertValue(map<string, set<string> >& myMap, string const& key,
-                    string const& value)
+void insertValue(map<string, set<string> >& myMap)
 {
    // Check whether there is already a set given the key.
    // If so, insert to the existing set.
    // Otherwise, create a set and add it to the map.
-
+    string tagName,filePath,key,value;
+    cin >> tagName;                 //Take tag name from user
+    cin >> filePath;//Take file path from user
+    key=tagName;
+    value=filePath;
    map<string, set<string> >::iterator found = myMap.find(key);
    if ( found != myMap.end() )
    {
@@ -53,10 +56,25 @@ int main()
 {
     string tagName;
     string filePath;
+    int n;
+
+
 
     map <string,set <string> > myMap;
+    cin>>n;
+    switch(n)
+    {
+        case 1:
+           insertValue(myMap);
+        break;
+        case 2:
+            getFiles();
+            break;
+        case 3:
+            removeTagFromFile();
+            break;
+        default:
+            cout<<"Error"<<endl;
+    }
 
-    cin >> tagName;                 //Take tag name from user
-    cin >> filePath;                //Take file path from user
-    insertValue(myMap,tagName, filePath);
 }
