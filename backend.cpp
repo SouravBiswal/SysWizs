@@ -7,7 +7,7 @@
 using namespace std;
 
 
-void insertValue(map<string, set<string> >& myMap)
+void insertValue(map<string, set<string> >& myMap,map<string, set<string> >& TagPerFiles)
 {
    // Check whether there is already a set given the key.
    // If so, insert to the existing set.
@@ -30,9 +30,24 @@ void insertValue(map<string, set<string> >& myMap)
       temp.insert(value);
       myMap.insert(make_pair(key, temp));
    }
+    key=filePath;
+    value=tagName;
+    map<string, set<string> >::iterator found2 = TagPerFiles.find(key);
+    if ( found2 != TagPerFiles.end() )
+   {
+      //cout << "Adding '" << value << "' to an existing set of " << key << "s.\n";
+      found2->second.insert(value);
+   }
+   else
+   {
+      //cout << "Adding '" << value << "' to a new set of " << key << "s.\n";
+      set<string> temp;
+      temp.insert(value);
+      TagPerFiles.insert(make_pair(key, temp));
+   }
 }
 
-void getFiles(map<string, set<string> > myMap)
+void getFiles(map<string, set<string> > myMap,map<string, set<string> >TagPerFiles)
 {
     string tag;
 
@@ -40,9 +55,16 @@ void getFiles(map<string, set<string> > myMap)
    if ( myMap[tag].size()>0 )
    {
       //cout << "Print the present sets";
-      //for(auto& it : myMap[tag])
-        //cout<<it<<" ";
-   }
+      for(auto& it : myMap[tag])
+        {cout<<it<<" ";
+         if(TagPerFiles[it].size()>0)
+         {
+             for(auto& it2 :TagPerFiles[it] )
+                cout<<it2<<" ";
+         }
+         cout<<endl;
+        }
+         }
    else
    {
       //cout << "no such tag available";
@@ -69,16 +91,16 @@ int main()
 
 
     map <string,set <string> > myMap;
-
+    map <string,set <string> >TagPerFiles;
     while(n!=4)
     {cin>>n;
     switch(n)
     {
         case 1:
-           insertValue(myMap);
+           insertValue(myMap,TagPerFiles);
         break;
         case 2:
-            getFiles(myMap);
+            getFiles(myMap,TagPerFiles);
             break;
         case 3:
             removeTagFromFile();
