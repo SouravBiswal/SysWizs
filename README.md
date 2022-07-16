@@ -1,7 +1,7 @@
 ## SysWiz - File Tagging feature 
 ## Graphical User Interface :
 
-![image](https://user-images.githubusercontent.com/92429666/179356682-14170d22-03c3-4c7a-a910-3ae90c4e4d71.png)
+![image](https://user-images.githubusercontent.com/92429666/179373802-4a0f020e-8762-4e89-a538-4fa7ee2737e7.png)
 
 The GUI offers two basic functionalities -
 1. Search a file using tag.
@@ -20,3 +20,7 @@ The obvious choice was to use a NoSQL database, since data in a NoSQL database a
 We didn't opt for Relational Database as all the data is stored in form of tables and searching would cost ```O(n)```.
 
 We chose MongoDB as our NoSQL database as it has support for C++. 
+
+
+![image](https://user-images.githubusercontent.com/92429666/179373789-1dc764a3-b0e1-44b0-8727-7bf9a670b219.png)
+
