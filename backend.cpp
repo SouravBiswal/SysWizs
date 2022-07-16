@@ -1,29 +1,35 @@
 #include <iostream>
 #include <stdlib.h>
+#include <map>
+#include <string>
+#include <set>
 
 using namespace std;
 
-int buildTag()
+
+void insertValue(map<string, set<string> >& myMap, string const& key,
+                    string const& value)
 {
-    string tagName;
+   // Check whether there is already a set given the key.
+   // If so, insert to the existing set.
+   // Otherwise, create a set and add it to the map.
 
-    cin >> tagName;
-
-    /*fetch map from database and check if tag already exists
-    if yes, throw error, else create new tag
-    */
-
-    string fileName, filePath;
-
-    cin >> fileName;
-    cin >> filePath;
-
-    // Add filename and filepath to the map
-
-    return 0;
+   map<string, set<string> >::iterator found = myMap.find(key);
+   if ( found != myMap.end() )
+   {
+      //cout << "Adding '" << value << "' to an existing set of " << key << "s.\n";
+      found->second.insert(value);
+   }
+   else
+   {
+      //cout << "Adding '" << value << "' to a new set of " << key << "s.\n";
+      set<string> temp;
+      temp.insert(value);
+      myMap.insert(make_pair(key, temp));
+   }
 }
 
-int getFiles()
+void getFiles()
 {
     string tag;
 
@@ -31,47 +37,26 @@ int getFiles()
 
     // Check if tag is present in map, if not give error, else fetch the files and return them
 
-    return 0;
 }
 
-int addFilestoTag()
+void removeTagFromFile()
 {
-    string tagName;
-    cin >> tagName;
-    // Check if tag exists, if not, ask to create one first else proceed
-
-    // Currently we are accepting only one file at a time, later will scale to many at a time
-
-    string fileName, filePath;
-
-    cin >> fileName;
-    cin >> filePath;
-
-    // map.get(tag).add(new Pair{fileName,filePath});
-
-    return 0;
-}
-
-int deleteTag()
-{
-    string tagName;
-    cin >> tagName;
-
-    // map.remove(tagName);
-    return 0;
-}
-
-int removeTagFromFile()
-{
-    string fileName;
-    cin >> fileName;
-
-    string tagName;
-    cin >> tagName;
 
     /* This is incomplete
      */
 
     // if (map.contains(tagName))
     //     if (map.get(tagName))
+}
+
+int main()
+{
+    string tagName;
+    string filePath;
+
+    map <string,set <string> > myMap;
+
+    cin >> tagName;                 //Take tag name from user
+    cin >> filePath;                //Take file path from user
+    insertValue(myMap,tagName, filePath);
 }
