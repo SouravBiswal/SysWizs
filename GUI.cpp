@@ -45,33 +45,6 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevinst, LPSTR args, int ncmdsho
     }
     return 0;
 }
-/*void open_file(HWND hwnd)
-{
-
-    OPENFILENAME ofn;
-
-    ZeroMemory(&ofn, sizeof(ofn));
-    ofn.lStructSize = sizeof(ofn);
-    ofn.hwndOwner = NULL;
-    ofn.lpstrFile = szFile;
-    ofn.lpstrFile[0] = '\0';
-    ofn.nMaxFile = sizeof(szFile);
-    ofn.lpstrFilter = "All\0*.*\0Text\0*.TXT\0";
-    ofn.nFilterIndex = 1;
-    ofn.lpstrFileTitle = NULL;
-    ofn.nMaxFileTitle = 0;
-    ofn.lpstrInitialDir = NULL;
-    ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
-
-    if(GetOpenFileName(&ofn))
-    {
-
-    }
-
-    // Now simpley display the file name
-    MessageBox(NULL, ofn.lpstrFile, "File Name", MB_OK);
-    return;
-}*/
 LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 {
 
@@ -129,7 +102,7 @@ void AddControlRetrieve(HWND hwnd)
 
     CreateWindowW(L"Static", L"-------------------------------------------------------------------------------------------------------", WS_VISIBLE | WS_CHILD, 45, 220, 400, 100, hwnd, NULL, NULL, NULL);
     CreateWindowW(L"Static", L"File_Tagging_System :", WS_VISIBLE | WS_CHILD, 20, 250, 160, 38, hwnd, NULL, NULL, NULL);
-    CreateWindowW(L"Static", L"File_name:", WS_VISIBLE | WS_CHILD, 100, 280, 98, 38, hwnd, NULL, NULL, NULL);
+    CreateWindowW(L"Static", L"File_Directory", WS_VISIBLE | WS_CHILD, 100, 280, 98, 38, hwnd, NULL, NULL, NULL);
 
     hName = CreateWindowW(L"Edit", L"", WS_VISIBLE | WS_CHILD | WS_BORDER, 200, 275, 98, 38, hwnd, NULL, NULL, NULL);
 
