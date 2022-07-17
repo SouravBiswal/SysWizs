@@ -1,0 +1,30 @@
+﻿  GUI.cpp
+F:\Downloads\GUI.cpp(75,44): error C2664: 'int GetWindowTextW(HWND,LPWSTR,int)': cannot convert argument 2 from 'char [1000]' to 'LPWSTR'
+F:\Downloads\GUI.cpp(75,34): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(8931,1): message : see declaration of 'GetWindowTextW'
+F:\Downloads\GUI.cpp(76,50): error C2664: 'int GetWindowTextW(HWND,LPWSTR,int)': cannot convert argument 2 from 'char [1000]' to 'LPWSTR'
+F:\Downloads\GUI.cpp(76,38): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(8931,1): message : see declaration of 'GetWindowTextW'
+F:\Downloads\GUI.cpp(80,35): error C2664: 'BOOL SetWindowTextW(HWND,LPCWSTR)': cannot convert argument 2 from 'const char [1]' to 'LPCWSTR'
+F:\Downloads\GUI.cpp(80,33): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(8910,1): message : see declaration of 'SetWindowTextW'
+F:\Downloads\GUI.cpp(81,39): error C2664: 'BOOL SetWindowTextW(HWND,LPCWSTR)': cannot convert argument 2 from 'const char [1]' to 'LPCWSTR'
+F:\Downloads\GUI.cpp(81,37): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(8910,1): message : see declaration of 'SetWindowTextW'
+F:\Downloads\GUI.cpp(87,42): error C2664: 'int GetWindowTextW(HWND,LPWSTR,int)': cannot convert argument 2 from 'char [1000]' to 'LPWSTR'
+F:\Downloads\GUI.cpp(87,33): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(8931,1): message : see declaration of 'GetWindowTextW'
+F:\Downloads\GUI.cpp(96,34): error C2664: 'BOOL SetWindowTextW(HWND,LPCWSTR)': cannot convert argument 2 from 'const char [1]' to 'LPCWSTR'
+F:\Downloads\GUI.cpp(96,32): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(8910,1): message : see declaration of 'SetWindowTextW'
+F:\Downloads\GUI.cpp(97,39): error C2664: 'BOOL SetWindowTextW(HWND,LPCWSTR)': cannot convert argument 2 from 'char [1000]' to 'LPCWSTR'
+F:\Downloads\GUI.cpp(97,33): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(8910,1): message : see declaration of 'SetWindowTextW'
+F:\Downloads\GUI.cpp(89,13): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Downloads\GUI.cpp(93,13): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\Downloads\GUI.cpp(116,51): error C2664: 'BOOL AppendMenuW(HMENU,UINT,UINT_PTR,LPCWSTR)': cannot convert argument 4 from 'const char [5]' to 'LPCWSTR'
+F:\Downloads\GUI.cpp(116,45): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(7613,1): message : see declaration of 'AppendMenuW'
+F:\Downloads\GUI.cpp(117,56): error C2664: 'BOOL AppendMenuW(HMENU,UINT,UINT_PTR,LPCWSTR)': cannot convert argument 4 from 'const char [5]' to 'LPCWSTR'
+F:\Downloads\GUI.cpp(117,50): message : Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(7613,1): message : see declaration of 'AppendMenuW'
